@@ -1,0 +1,51 @@
+{% extends 'home/basic.html' %}
+{% block css %}
+div{
+margin-bottom : 20px;
+margin-left : 2%;
+margin-right : 5%;
+}
+button{margin-left : 2%;}
+h1{font-family : cursive;
+color :#669999;
+margin-left :7%;
+text-shadow:-30px 20px 20px dimgrey;
+margin-bottom : 30px;
+margin-top : 5%;}
+{% endblock css %}
+{% block body %}
+<h1>CONTACT ME<h1>
+<form action="/contact/" method="POST">
+  {% csrf_token %}
+  <div class="form-row">
+    <div class="col">
+      <label>first name</label>
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <label>last name</label>
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+    <div class="form-row">
+    <div class="col">
+      <label>email address</label>
+      <input type="email" class="form-control" placeholder="email address">
+    </div></div>
+    <div class="form-row">
+      <div class="col">
+    <label for="msg">comments</label>
+    <textarea class="form-control" id="desc" name="msg" rows="3" placeholder="comments"></textarea>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
+  {% block js %}
+<script>
+{% if thank %}
+alert('Thanks for contacting with us.');
+document.location="/contact";
+{% endif %}
+</script>
+{% endblock %}

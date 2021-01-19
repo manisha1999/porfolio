@@ -1,0 +1,68 @@
+{% extends 'home/basic.html' %}
+{% block css %}
+body{color :white;}
+p,h1{
+font-family : Playball;
+
+color: #669999;
+margin-bottom: 30px;
+margin-left: 5%;
+}
+h4{font-family : Playball;}
+h1{text-shadow:-30px 20px 20px dimgrey;}
+/*div{margin-left: 5%;}*/
+.fas{
+  border : 3px solid white;
+ border-radius: 15px 50px;
+  padding: 50px;
+  margin: 20px;}
+}
+
+
+{% load static %}
+i.fa-music{
+background-image :url(% static 'home/images/music.jpg' %);}
+.footer {
+    
+  padding: 20px;
+  text-align: center;
+  background: ;
+  color:white;}
+
+
+  
+
+          {% endblock css %}
+
+{% block body %}
+
+
+             
+
+
+<h1 style="font-size:40px ;">MY INTERESTS </h1>
+<div style="margin-left:5% ;">
+  <ul>
+      <li><i class='fas fa-music' style='font-size:48px;color:white'></i></li>
+      <li><i class='fas fa-plane-departure' style='font-size:48px;color:white'></i></li>
+
+  </ul>
+</div>
+
+  
+
+<footer style="margin-top:10% ;">
+  <div class="container" >
+      <div class="row well ml-t">
+          <div class="col-lg-8 col-md-8">
+              <h4 style="color: white;font-size: 25px;;">Developed by: <a href="#" target="_blank">Manisha</a></h4>
+          </div>
+          <div class="col-lg-4 col-md-4">
+              <p class="m-t" style="color: white;">Copyright &copy <a href="#"target="_blank">www.Manisha.com</a> 2017</p>
+              <p style="color: white;">All Rights Reserved.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+{% endblock %}
+

@@ -1,0 +1,97 @@
+{% extends 'home/basic.html' %}
+{% block css %}
+p,h4,h3{
+   
+   font-family : Playball;
+}
+h1{
+    font-family:Playball;
+}
+h1{margin-bottom:30px;
+color:#669999;
+text-shadow:-30px 20px 20px dimgrey;}
+body{color :white;
+margin-left:5%}
+/*div{margin-bottom:70px;
+margin-right: 20px;}*/
+.footer {
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .footer{
+    background-color:#669999;
+    color:white;}
+.box{
+
+  border: 10px dotted #669999;
+  padding: 50px;
+  margin: 20px;}
+  aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    
+  }
+          {% endblock css %}
+{% block body %}
+<div style="margin-bottom:70px;
+margin-right: 20px;">
+    {% load static %}
+    <aside><img src="{% static 'home/images/ma.png' %}"></aside>
+<h1>BASIC INFORMATION </h1>
+<h4> Name : Manisha</h4>
+<h4> Email : monimehra1999@gmail.com</h4>
+<h4> Phone :(+91)-8168230683</h4>
+<h4> Date of birth : 1 March ,1999</h4>
+<h4> Address : RZ 36 A Jagdamba vihar, West Sagar pur ,
+    New Delhi :110046 </h4>
+
+<h4> Nationality : Indian </h4>
+
+   </div>
+<div style="margin-bottom:70px;
+margin-right: 20px;">
+<h1>PROFESSIONAL PROFILE</h1>
+    <p style="font-size:25px ;">An Aspiring Engineering Undergraduate from University Institute of Engineering & Technology and a Passionate Software Developer with experience in Web Development . I'm a Full Stack Developer and a Tech Enthusiast with interests in latest upcoming technologies and Digital World.</p></div>
+
+<div>
+    <h1>Education </h1>
+
+    <div class ="box" style="margin-bottom:70px;
+    margin-right: 20px;"><h3>B.Tech in Computer Science & Engineering</h3>
+        <h3>CGPA: 7 (till Sem VI)</h3>
+            <h3>2017-Present</h3>
+            <p style="font-size:25px ;">Pursuing my Bachelors Degree from University Institute of Engineering & Technology, Kurukshetra University.</p>
+    </div>
+    <div class ="box" style="margin-bottom:70px;
+    margin-right: 20px;"><h3>12th</h3>
+        <h3>Secured : 80.2%
+            <h3>2015-16</h3>
+            <p style="font-size:25px ;">Completed my Senior secondary education from Sant Haridaas Shiksha Sadan, Ridhau, Sonepat</p>
+    </div>
+    <div class ="box" style="margin-bottom:70px;
+    margin-right: 20px;"><h3>10th</h3>
+        <h3>Secured : 94.4%</h3>
+            <h3>2013-14</h3>
+            <p style="font-size:25px ;">Completed my Secondary education from Sant Haridaas Shiksha Sadan, Ridhau, Sonepat</p>
+    </div></div>
+
+
+    <!--Skills ****-->
+    <footer style="margin-top:10% ; margin-bottom: 2%;">
+        <div class="container">
+            <div class="row well ml-t">
+                <div class="col-lg-8 col-md-8">
+                    <h4 style="font-size:25px ;">Developed by: <a href="#" target="_blank">Manisha</a></h4>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p class="m-t">Copyright &copy <a href="#" target="_blank">www.Manisha.com</a> 2017</p>
+                    <p>All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}

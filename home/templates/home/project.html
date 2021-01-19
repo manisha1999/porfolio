@@ -1,0 +1,106 @@
+{% extends 'home/basic.html' %}
+
+{% block css %}
+  .col-md-3{
+      display: inline-block;
+      margin-left :5%;
+      margin-bottom :30px;
+      }
+.col-md-3 img{
+      max-width:285px;
+      height:150px;
+      }
+     /*body {
+      padding-left :auto;
+      padding-right:auto;
+      }*/
+p,h5,h1{
+   font-family:cursive;
+}
+h1{color :#669999;
+margin-left :7%;
+text-shadow:-30px 20px 20px dimgrey;
+margin-bottom : 30px;
+margin-top : 5%;}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: grey;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+.fa-github:hover {
+  color: black;
+}
+.icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.fa-user{
+color:white;}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+.footer{
+  background-color:black;
+  color:white;}
+
+{% endblock %}
+{% block body %}
+<h1>PROJECTS</h1>
+<p >
+  {% for i in pro %}
+      <div class="col-x3-3 col-sm-3 col-md-3 col-y3-3">
+        <div class="card align-items-center" style="width: 18rem;">
+            <div class="container">
+              <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+                <div class="overlay">
+                  <a href="https://github.com/manisha1999/ecommerce.git" class="icon" title="github link"><i class="fa fa-github"></i></a>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" id="namepr{{i.id}}">{{i.name}}</h5>
+            </div>
+            <p class="card-text">{{i.desc}}</p>
+
+        </div>
+     </div>
+
+  {% endfor %}
+</p>
+<footer>
+      <div class="container">
+          <div class="row well ml-t">
+              <div class="col-lg-8 col-md-8">
+                  <h4>Developed by: <a href="https://carlofontanos.com" target="_blank">Carl Victor C. Fontanos</a></h4>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                  <p class="m-t">Copyright &copy <a href="https://carlofontanos.com" target="_blank">www.carlofontanos.com</a> 2017</p>
+                  <p>All Rights Reserved.</p>
+              </div>
+          </div>
+      </div>
+</footer>
+{% endblock %}
